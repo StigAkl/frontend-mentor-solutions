@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-soft-blue: hsl(215, 51%, 70%);
+  --color-cyan: hsl(178, 100%, 50%);
+  --color-main-bg: hsl(217, 54%, 11%);
+  --color-card-bg: hsl(216, 50%, 16%);
+  --color-dark-blue-line: hsl(215, 32%, 27%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+body {
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+  font-weight: 300;
+  background-color: var(--color-main-bg);
+}
+
+.container {
+  width: 350px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--color-card-bg);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 2px 19px 72px 14px rgba(3, 3, 13, 0.57);
+}
+
+.equilibrium-image {
+  position: relative;
+}
+
+.card img {
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+.card-image-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  background-color: var(--color-cyan);
+  border-radius: 10px;
+  height: 295px;
+}
+
+.eye {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.equilibrium-image:hover .card-image-overlay {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.equilibrium-image:hover .eye {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.card-title {
+  color: var(--color-white);
+  font-size: 20px;
+  padding-top: 20px;
+}
+
+.card-description {
+  color: var(--color-soft-blue);
+  font-size: 16px;
+  line-height: 22px;
+  padding-top: 15px;
+}
+
+.price-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-dark-blue-line);
+}
+
+.price {
+  color: var(--color-cyan);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+
+.price img {
+  margin-right: 5px;
+}
+
+.days-left {
+  display: flex;
+  align-items: center;
+  color: var(--color-soft-blue);
+  font-size: 16px;
+}
+
+.days-left img {
+  margin-right: 5px;
+}
+
+.author {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  color: var(--color-soft-blue);
+  font-size: 15px;
+}
+
+.author img {
+  margin-right: 10px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.author-name {
+  color: var(--color-white);
+  margin-left: 5px;
+}
+
+.author-name:hover,
+.card-title:hover {
+  color: var(--color-cyan);
+  cursor: pointer;
+}
